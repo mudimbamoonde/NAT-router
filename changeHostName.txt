@@ -1,4 +1,20 @@
-=>enable
-=>config t
-=>hostname
-=>name
+Router#configure terminal
+
+Enter configuration commands, one per line. End with CNTL/Z.
+
+Router(config)#
+
+Router(config)#ip nat inside source static 10.0.0.2 59.40.40.1
+Router(config)#interface fa0/0
+Router(config-if)#ip nat inside 
+Router(config-if)#exit
+Router(config)#interface fa0/1
+Router(config-if)#ip nat outside
+Router(config-if)#exit
+Router(config)#exit
+Router#
+Router#write memory
+
+Building configuration... [OK]
+
+Router#
